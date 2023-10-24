@@ -25,6 +25,7 @@ export const AppContainer = () => {
                 favoriteColor={employee.favoriteColor}
                 position={employee.jobTitle}
                 quote={employee.about}
+                email={employee.email}
               />
             );
           })}

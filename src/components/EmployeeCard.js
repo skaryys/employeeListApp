@@ -3,13 +3,17 @@ import { PropTypes } from 'prop-types';
 
 const StyledEmployeeCard = styled.div`
   display: flex;
+  color: #60646d;
   flex-direction: column;
   align-items: center;
   width: 260px;
   padding: 20px;
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  color: #60646d;
+
+  & > ::selection {
+    background-color: ${(props) => props.color}};
+  }
 
   @media (min-width: 768px) {
     width: 400px;
@@ -45,16 +49,30 @@ const StyledQuote = styled.div`
   margin-right: -20px;
 `;
 
-const StyledButton = styled.button``;
+const StyledButton = styled.button`
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: ${(props) => props.color}};    
+`;
 
-export const EmployeeCard = ({ name, imageUrl, favoriteColor, position, quote }) => {
+export const EmployeeCard = ({ name, imageUrl, favoriteColor, position, quote, email }) => {
+  const contactMe = () => {
+    window.location.href = `mailto:${email}`;
+  };
+
   return (
-    <StyledEmployeeCard>
+    <StyledEmployeeCard color={favoriteColor}>
       <StyledImage src={imageUrl} alt={name} color={favoriteColor} />
       <StyledName>{name}</StyledName>
       <StyledPosition>{position}</StyledPosition>
       <StyledQuote>{`"${quote}"`}</StyledQuote>
-      <StyledButton>Contact me</StyledButton>
+      <StyledButton onClick={contactMe} title={email} color={favoriteColor}>
+        Contact me
+      </StyledButton>
     </StyledEmployeeCard>
   );
 };
@@ -64,5 +82,6 @@ EmployeeCard.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   favoriteColor: PropTypes.string.isRequired,
   position: PropTypes.string.isRequired,
-  quote: PropTypes.string.isRequired
+  quote: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired
 };
