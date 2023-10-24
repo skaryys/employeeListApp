@@ -1,2 +1,6 @@
 /*for basic CSS reset*/
-@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css")
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+
+body {
+    background-color: #f2f3f5;
+}

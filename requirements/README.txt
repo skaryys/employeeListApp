@@ -10,7 +10,7 @@ Product Requirements
 
 UX Requirements
 ------------------------------
-- background color: #f2f3f5
+- background color: #f2f3f5 #DONE
 - card color: #ffffff
 - text color: #60646d
 - quote banner color: #dce0e8

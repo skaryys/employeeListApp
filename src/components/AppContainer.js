@@ -1,4 +1,5 @@
 import { useEmployees } from '../hooks/useEmployees';
+import { EmployeesContainer } from './EmployeesContainer';
 
 export const AppContainer = () => {
   const { employees, loading, error } = useEmployees(
@@ -12,7 +13,11 @@ export const AppContainer = () => {
       ) : error ? (
         <div>{error}</div>
       ) : (
-        <div>{JSON.stringify(employees)}</div>
+        <EmployeesContainer>
+          {employees.map((employee) => {
+            return <div key={employee._id}>{JSON.stringify(employee)}</div>;
+          })}
+        </EmployeesContainer>
       )}
     </div>
   );
