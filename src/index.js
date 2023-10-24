@@ -1,10 +1,10 @@
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { StrictMode } from 'react';
 
 import './styles.css';
 import { AppContainer } from './components/AppContainer';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AppContainer />
   </StrictMode>
