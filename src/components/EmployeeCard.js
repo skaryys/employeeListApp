@@ -15,18 +15,29 @@ const StyledEmployeeCard = styled.div`
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 5px solid black;
+    border: 5px solid ${(props) => props.color}};
+  }
+
+  .name {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 10px 0;
   }
 `;
 
-export const EmployeeCard = ({ imageUrl }) => {
+export const EmployeeCard = ({ name, imageUrl, color, position }) => {
   return (
-    <StyledEmployeeCard>
-      <img src={imageUrl} alt="" />
+    <StyledEmployeeCard color={color}>
+      <img src={imageUrl} alt={name} />
+      <div className="name">{name}</div>
+      <div>{position}</div>
     </StyledEmployeeCard>
   );
 };
 
 EmployeeCard.propTypes = {
-  imageUrl: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
+  color: PropTypes.isRequired,
+  position: PropTypes.string.isRequired
 };

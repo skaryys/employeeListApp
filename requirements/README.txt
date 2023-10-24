@@ -15,7 +15,7 @@ UX Requirements
 - text color: #60646d #DONE
 - quote banner color: #dce0e8
 - profile pics are 150px circle #DONE
-- profile pics have 5px border of employee's favorite color
+- profile pics have 5px border of employee's favorite color #DONE
 - "Contact Me" button will initiate an email to employee's email address when clicked
 - "Contact Me" button is the employee's favorite color
 

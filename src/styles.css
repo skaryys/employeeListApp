@@ -1,6 +1,12 @@
 /*for basic CSS reset*/
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
 
 body {
     background-color: #f2f3f5;
+    font-family: 'Rubik', sans-serif;
+}
+
+.App {
+    text-align: center;
 }

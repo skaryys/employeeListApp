@@ -9,6 +9,7 @@ export const AppContainer = () => {
 
   return (
     <div className="App">
+      <h1>Employees</h1>
       {loading ? (
         <div>Loading...</div>
       ) : error ? (
@@ -16,7 +17,15 @@ export const AppContainer = () => {
       ) : (
         <EmployeesContainer>
           {employees.map((employee) => {
-            return <EmployeeCard key={employee._id} imageUrl={employee.image} />;
+            return (
+              <EmployeeCard
+                key={employee._id}
+                name={`${employee.firstName} ${employee.lastName}`}
+                imageUrl={employee.image}
+                color={employee.favoriteColor}
+                position={employee.jobTitle}
+              />
+            );
           })}
         </EmployeesContainer>
       )}
