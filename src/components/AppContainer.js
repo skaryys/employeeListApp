@@ -1,4 +1,5 @@
 import { useEmployees } from '../hooks/useEmployees';
+import { EmployeeCard } from './EmployeeCard';
 import { EmployeesContainer } from './EmployeesContainer';
 
 export const AppContainer = () => {
@@ -15,7 +16,7 @@ export const AppContainer = () => {
       ) : (
         <EmployeesContainer>
           {employees.map((employee) => {
-            return <div key={employee._id}>{JSON.stringify(employee)}</div>;
+            return <EmployeeCard key={employee._id}>{JSON.stringify(employee)}</EmployeeCard>;
           })}
         </EmployeesContainer>
       )}

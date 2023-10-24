@@ -11,7 +11,7 @@ Product Requirements
 UX Requirements
 ------------------------------
 - background color: #f2f3f5 #DONE
-- card color: #ffffff
+- card color: #ffffff #DONE
 - text color: #60646d
 - quote banner color: #dce0e8
 - profile pics are 150px circle

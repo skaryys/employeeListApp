@@ -13,7 +13,6 @@ export const useEmployees = (url) => {
           throw new Error('Cant get employees');
         }
         const employeesJson = await response.json();
-        console.log(employeesJson);
         setEmployees(employeesJson);
         setLoading(false);
       } catch {
