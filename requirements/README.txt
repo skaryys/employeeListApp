@@ -21,4 +21,4 @@ UX Requirements
 
 EXTRA
 - (extra credit - styling) the "Contact Me" button color lightens 5% on hover
-- (extra credit - styling) the quote banner extends beyond the card horizontally
+- (extra credit - styling) the quote banner extends beyond the card horizontally #DONE

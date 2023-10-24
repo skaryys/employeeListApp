@@ -22,8 +22,9 @@ export const AppContainer = () => {
                 key={employee._id}
                 name={`${employee.firstName} ${employee.lastName}`}
                 imageUrl={employee.image}
-                color={employee.favoriteColor}
+                favoriteColor={employee.favoriteColor}
                 position={employee.jobTitle}
+                quote={employee.about}
               />
             );
           })}
