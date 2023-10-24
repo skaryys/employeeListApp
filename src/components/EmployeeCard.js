@@ -12,7 +12,8 @@ const StyledEmployeeCard = styled.div`
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
   & > ::selection {
-    background-color: ${(props) => props.color}};
+    background-color: ${(props) => props.color};
+    color: #fff;
   }
 
   @media (min-width: 768px) {
@@ -24,7 +25,7 @@ const StyledImage = styled.img`
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 5px solid ${(props) => props.color}};
+  border: 5px solid ${(props) => props.color};
 `;
 
 const StyledName = styled.div`
@@ -56,7 +57,12 @@ const StyledButton = styled.button`
   padding: 15px 30px;
   text-transform: uppercase;
   color: #fff;
-  background-color: ${(props) => props.color}};    
+  background-color: ${(props) => props.color};
+  transition: filter 0.3s;
+
+  &:hover {
+    filter: brightness(1.05);
+  }
 `;
 
 export const EmployeeCard = ({ name, imageUrl, favoriteColor, position, quote, email }) => {
