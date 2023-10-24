@@ -6,7 +6,7 @@ Product Requirements
 - index.js is your starting point. #DONE
 - employees.json includes the data, and is already imported into index.js #DONE
 - Build components with reusability in mind. #DONE
-- Fetch data from the following link instead of using data https://run.mocky.io/v3/ce160a84-83a8-45cf-9cf7-755d61acef54
+- Fetch data from the following link instead of using data https://run.mocky.io/v3/ce160a84-83a8-45cf-9cf7-755d61acef54 #DONE - but mocky seem to does not work
 
 UX Requirements
 ------------------------------
