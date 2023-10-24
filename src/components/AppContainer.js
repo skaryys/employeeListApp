@@ -16,7 +16,7 @@ export const AppContainer = () => {
       ) : (
         <EmployeesContainer>
           {employees.map((employee) => {
-            return <EmployeeCard key={employee._id}>{JSON.stringify(employee)}</EmployeeCard>;
+            return <EmployeeCard key={employee._id} imageUrl={employee.image} />;
           })}
         </EmployeesContainer>
       )}
